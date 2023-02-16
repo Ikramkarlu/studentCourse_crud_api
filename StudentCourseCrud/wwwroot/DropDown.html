@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Geocoding Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="testingApi.js"></script>
+</head>
+<body>
+    <div>
+        <label for="address">Enter an address:</label>
+        <input type="text" id="address">
+        <button id="geocode-button" onclick="geocodeAddress()">Geocode</button>
+    </div>
+    <div>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+    </div>
+
+    <!--<button id="geocode-button">Geocode</button>-->
+
+    <!--<script>
+        // get references to the input field and the button
+        const addressInput = $('#address');
+        const geocodeButton = $('#geocode-button');
+
+        // add an event listener to the button to geocode the address
+        geocodeButton.on('click', () => {
+            // get the address from the input field
+            const address = addressInput.val();
+            const accessKey = '8a97cb51dc374598b70d65f63b9906ce';
+            const url = 'https://api.positionstack.com/v1/forward';
+            // make the AJAX request
+            $.ajax({
+                url: url,
+                data: {
+                    access_key: accessKey,
+                    query: address,
+                    limit: 1
+                }
+            }).done(function (data) {
+                console.log(data);
+                // extract geocoding information from the response
+                const latitude = data.data[0].latitude;
+                const longitude = data.data[0].longitude;
+                // display the latitude and longitude on the page
+                $('#latitude').text(latitude);
+                $('#longitude').text(longitude);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.error(errorThrown);
+            });
+        });
+    </script>-->
+    <!--<script>
+    // get references to the input field and the button
+    const addressinput = document.getelementbyid('address');
+    const geocodebutton = document.getelementbyid('geocode-button');
+
+    // add an event listener to the button to geocode the address
+    geocodebutton.addeventlistener('click', () => {
+       // get the address from the input field
+       const address = addressinput.value;
+        const accesskey = '8a97cb51dc374598b70d65f63b9906ce';
+        const url = `http://api.positionstack.com/v1/forward?access_key=${accesskey}&query=${encodeuricomponent(address)}`;
+        fetch(url)
+           .then(response => response.json())
+            .then(data => {
+                // extract geocoding information from the response
+                const latitude = data.data[0].latitude;
+                const longitude = data.data[0].longitude;
+                // display the latitude and longitude on the page
+                document.getelementbyid('latitude').textcontent = latitude;
+                document.getelementbyid('longitude').textcontent = longitude;
+            })
+            .catch(error => {
+                // handle errors
+                console.error(error);
+            });
+    });
+    </script>-->
+</body>
+</html>

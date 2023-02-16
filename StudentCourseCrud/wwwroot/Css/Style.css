@@ -1,0 +1,33 @@
+﻿body {
+    /*display: flex;*/
+}
+
+/*label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}*/
+
+/*.multi_select_box{
+    width:400px;
+    margin:80px auto;
+}
+*/
+/*.multi_select_box select{
+    width:100%;
+}*/
+
+.multi_select_box button{
+    background-color: darkslategray !important;
+    color: #fff !important;
+    /*padding: 15px 25px;*/
+}
+
+/*.custom-table table {
+    width: 100%;
+}
+.custom-table{
+    padding:0 !important;
+}*/
